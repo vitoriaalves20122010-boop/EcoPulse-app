@@ -3,715 +3,707 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EcoLixeira</title>
+
+<title>EcoLixeira Smart</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-:root {
-    --verde: #20a464;
-    --verde-escuro: #087f45;
-    --fundo: #f4f7f5;
-    --card: #ffffff;
-    --texto: #17221c;
-    --cinza: #78837d;
-    --borda: #e2e8e4;
+:root{
+    --verde:#20a464;
+    --verde2:#0b8147;
+    --fundo:#f4f7f5;
+    --card:#ffffff;
+    --texto:#17221c;
+    --cinza:#78837d;
+    --borda:#e0e7e2;
+    --vermelho:#e74c3c;
+    --amarelo:#f0a52b;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #dce5df;
-    color: var(--texto);
+body{
+    font-family:Arial,sans-serif;
+    background:#dce5df;
+    color:var(--texto);
 }
 
-.app {
-    width: 100%;
-    max-width: 480px;
-    min-height: 100vh;
-    margin: auto;
-    background: var(--fundo);
-    position: relative;
-    overflow: hidden;
+.app{
+    max-width:480px;
+    min-height:100vh;
+    margin:auto;
+    background:var(--fundo);
+    position:relative;
+    overflow:hidden;
 }
 
-/* TOPO */
-
-.topo {
-    height: 75px;
-    background: var(--card);
-    border-bottom: 1px solid var(--borda);
-    padding: 14px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.topo{
+    height:75px;
+    background:var(--card);
+    border-bottom:1px solid var(--borda);
+    padding:14px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
-.logo {
-    color: var(--verde);
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 2px;
+.logo{
+    color:var(--verde);
+    font-size:10px;
+    font-weight:bold;
+    letter-spacing:2px;
 }
 
-.topo h1 {
-    font-size: 22px;
-    margin-top: 3px;
+.topo h1{
+    font-size:21px;
 }
 
-.btn-tema {
-    border: none;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: #edf5ef;
-    font-size: 20px;
-    cursor: pointer;
+.btn-tema{
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:#edf5ef;
+    cursor:pointer;
+    font-size:19px;
 }
 
-/* CONTEÚDO */
-
-.conteudo {
-    padding: 20px;
-    padding-bottom: 100px;
+.conteudo{
+    padding:20px;
+    padding-bottom:100px;
 }
 
-.tela {
-    display: none;
-    animation: aparecer 0.25s ease;
+.tela{
+    display:none;
+    animation:aparecer .25s ease;
 }
 
-.tela.ativa {
-    display: block;
+.tela.ativa{
+    display:block;
 }
 
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(8px);
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(8px);
     }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    to{
+        opacity:1;
+        transform:translateY(0);
     }
 }
 
-/* BANNER */
-
-.boas-vindas {
-    background: linear-gradient(135deg, #108b4e, #2dc174);
-    color: white;
-    border-radius: 24px;
-    padding: 23px;
-    min-height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 10px 25px #20a46433;
+.boas-vindas{
+    background:linear-gradient(135deg,#108b4e,#2dc174);
+    color:white;
+    border-radius:24px;
+    padding:23px;
+    min-height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 10px 25px #20a46433;
 }
 
-.boas-vindas span {
-    font-size: 12px;
+.boas-vindas span{
+    font-size:11px;
 }
 
-.boas-vindas h2 {
-    font-size: 20px;
-    margin: 8px 0;
+.boas-vindas h2{
+    font-size:20px;
+    margin:8px 0;
 }
 
-.boas-vindas p {
-    font-size: 11px;
-    max-width: 250px;
-    line-height: 1.5;
+.boas-vindas p{
+    font-size:11px;
+    line-height:1.5;
+    max-width:250px;
 }
 
-.icone-eco {
-    font-size: 48px;
+.icone-eco{
+    font-size:45px;
 }
 
-/* TÍTULOS */
-
-.titulo-secao {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 25px 0 13px;
+.titulo-secao{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:25px 0 13px;
 }
 
-.titulo-secao h2,
-.subtitulo {
-    font-size: 17px;
+.titulo-secao h2{
+    font-size:17px;
 }
 
-.btn-atualizar {
-    border: none;
-    background: transparent;
-    font-size: 25px;
-    cursor: pointer;
-    transition: transform 0.5s;
+.btn-atualizar{
+    border:none;
+    background:transparent;
+    font-size:26px;
+    cursor:pointer;
+    transition:.5s;
 }
 
-/* STATUS */
-
-.grid-status {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 11px;
+.grid-status{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:11px;
 }
 
-.card-status {
-    background: var(--card);
-    border: 1px solid var(--borda);
-    border-radius: 18px;
-    padding: 15px;
-    cursor: pointer;
-    transition: 0.2s;
+.card-status{
+    background:var(--card);
+    border:1px solid var(--borda);
+    border-radius:18px;
+    padding:15px;
+    cursor:pointer;
+    transition:.2s;
 }
 
-.card-status:hover {
-    transform: translateY(-2px);
+.card-status:hover{
+    transform:translateY(-2px);
 }
 
-.icone-status {
-    width: 38px;
-    height: 38px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    margin-bottom: 10px;
+.icone-status{
+    width:38px;
+    height:38px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    margin-bottom:10px;
 }
 
-.organic {
-    background: #e9f7df;
+.organic{background:#e9f7df}
+.reciclavel{background:#dff5e9}
+.papel{background:#e8eef8}
+.metal{background:#f8eadb}
+
+.card-status h3{
+    font-size:13px;
+    margin-bottom:9px;
 }
 
-.reciclavel {
-    background: #dff5e9;
+.barra{
+    height:7px;
+    background:#edf0ee;
+    border-radius:10px;
+    overflow:hidden;
 }
 
-.papel {
-    background: #e8eef8;
+.progresso{
+    height:100%;
+    border-radius:10px;
+    transition:.6s;
 }
 
-.metal {
-    background: #f8eadb;
-}
+.p1{background:#65b53e}
+.p2{background:#20a464}
+.p3{background:#6384bd}
+.p4{background:#df9251}
 
-.card-status h3 {
-    font-size: 13px;
-    margin-bottom: 9px;
-}
-
-.barra {
-    height: 7px;
-    background: #edf0ee;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.progresso {
-    height: 100%;
-    border-radius: 10px;
-    transition: width 0.6s ease;
-}
-
-.p1 {
-    background: #65b53e;
-}
-
-.p2 {
-    background: #20a464;
-}
-
-.p3 {
-    background: #6384bd;
-}
-
-.p4 {
-    background: #df9251;
-}
-
-.porcentagem {
-    display: block;
-    margin-top: 7px;
-    color: var(--cinza);
-    font-size: 10px;
+.porcentagem{
+    display:block;
+    margin-top:7px;
+    color:var(--cinza);
+    font-size:10px;
 }
 
 /* ALERTA */
 
-.alerta {
-    margin-top: 15px;
-    padding: 14px;
-    background: #fff5e5;
-    border: 1px solid #f2ddbd;
-    border-radius: 17px;
-    display: flex;
-    gap: 12px;
-    align-items: center;
+.alerta{
+    margin-top:15px;
+    padding:15px;
+    border-radius:17px;
+    display:flex;
+    gap:12px;
+    align-items:center;
+    border:1px solid;
+    transition:.3s;
 }
 
-.alerta strong {
-    font-size: 13px;
+.alerta.normal{
+    background:#e9f7ed;
+    border-color:#b9e2c6;
 }
 
-.alerta p {
-    font-size: 10px;
-    color: #806d55;
-    margin-top: 3px;
+.alerta.atencao{
+    background:#fff5df;
+    border-color:#f0d49c;
+}
+
+.alerta.perigo{
+    background:#ffe9e6;
+    border-color:#f2b4ad;
+}
+
+.alerta-icone{
+    font-size:25px;
+}
+
+.alerta strong{
+    font-size:13px;
+}
+
+.alerta p{
+    font-size:10px;
+    margin-top:4px;
+    color:var(--cinza);
 }
 
 /* AÇÕES */
 
-.subtitulo {
-    margin: 25px 0 12px;
+.subtitulo{
+    margin:25px 0 12px;
+    font-size:17px;
 }
 
-.acoes {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+.acoes{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
 }
 
-.acao {
-    background: var(--card);
-    border: 1px solid var(--borda);
-    border-radius: 16px;
-    padding: 12px 5px;
-    cursor: pointer;
-    color: var(--texto);
+.acao{
+    background:var(--card);
+    border:1px solid var(--borda);
+    border-radius:16px;
+    padding:12px 5px;
+    cursor:pointer;
+    color:var(--texto);
 }
 
-.acao:hover {
-    transform: translateY(-2px);
+.acao span{
+    display:block;
+    font-size:22px;
+    margin-bottom:5px;
 }
 
-.acao span {
-    display: block;
-    font-size: 23px;
-    margin-bottom: 5px;
+.acao small{
+    font-size:9px;
 }
 
-.acao small {
-    font-size: 9px;
+/* PÁGINAS */
+
+.titulo-pagina{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:20px;
 }
 
-/* TÍTULO DAS PÁGINAS */
-
-.titulo-pagina {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
+.titulo-pagina>span{
+    width:48px;
+    height:48px;
+    background:#dff4e8;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:23px;
 }
 
-.titulo-pagina > span {
-    width: 48px;
-    height: 48px;
-    background: #dff4e8;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
+.titulo-pagina h2{
+    font-size:21px;
 }
 
-.titulo-pagina h2 {
-    font-size: 21px;
-}
-
-.titulo-pagina p {
-    color: var(--cinza);
-    font-size: 10px;
-    margin-top: 3px;
+.titulo-pagina p{
+    color:var(--cinza);
+    font-size:10px;
+    margin-top:3px;
 }
 
 /* PESQUISA */
 
-.pesquisa {
-    height: 48px;
-    background: var(--card);
-    border: 1px solid var(--borda);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    padding: 0 14px;
-    gap: 8px;
-    margin-bottom: 15px;
+.pesquisa{
+    height:48px;
+    background:var(--card);
+    border:1px solid var(--borda);
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    padding:0 14px;
+    gap:8px;
+    margin-bottom:15px;
 }
 
-.pesquisa input {
-    border: none;
-    outline: none;
-    width: 100%;
-    background: transparent;
-    color: var(--texto);
+.pesquisa input{
+    border:none;
+    outline:none;
+    width:100%;
+    background:transparent;
+    color:var(--texto);
 }
 
 /* MATERIAIS */
 
-.materiais {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.materiais{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
 }
 
-.material {
-    background: var(--card);
-    border: 1px solid var(--borda);
-    padding: 14px;
-    border-radius: 17px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    cursor: pointer;
+.material{
+    background:var(--card);
+    border:1px solid var(--borda);
+    padding:14px;
+    border-radius:17px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    cursor:pointer;
 }
 
-.material:hover {
-    transform: translateY(-2px);
+.material-icone{
+    width:42px;
+    height:42px;
+    background:#edf5ef;
+    border-radius:13px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:21px;
 }
 
-.material-icone {
-    width: 42px;
-    height: 42px;
-    background: #edf5ef;
-    border-radius: 13px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 21px;
+.material-info{
+    flex:1;
 }
 
-.material-info {
-    flex: 1;
+.material h3{
+    font-size:13px;
 }
 
-.material h3 {
-    font-size: 13px;
+.material p{
+    color:var(--cinza);
+    font-size:10px;
+    margin-top:4px;
 }
 
-.material p {
-    color: var(--cinza);
-    font-size: 10px;
-    margin-top: 4px;
+/* ESTATÍSTICAS */
+
+.grande-estatistica{
+    background:linear-gradient(135deg,#10894e,#2cb76e);
+    color:white;
+    border-radius:22px;
+    padding:25px;
+    margin-bottom:13px;
 }
 
-/* DADOS */
-
-.grande-estatistica {
-    background: linear-gradient(135deg, #10894e, #2cb76e);
-    color: white;
-    border-radius: 22px;
-    padding: 25px;
-    margin-bottom: 13px;
+.grande-estatistica span{
+    font-size:11px;
 }
 
-.grande-estatistica span {
-    font-size: 11px;
+.grande-estatistica strong{
+    display:block;
+    font-size:35px;
+    margin:8px 0;
 }
 
-.grande-estatistica strong {
-    display: block;
-    font-size: 35px;
-    margin: 8px 0;
+.grande-estatistica small{
+    font-size:10px;
 }
 
-.grande-estatistica small {
-    font-size: 10px;
+.grid-estatisticas{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
 }
 
-.grid-estatisticas {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+.mini-estatistica{
+    background:var(--card);
+    border:1px solid var(--borda);
+    padding:16px;
+    border-radius:17px;
 }
 
-.mini-estatistica {
-    background: var(--card);
-    border: 1px solid var(--borda);
-    padding: 16px;
-    border-radius: 17px;
+.mini-estatistica span{
+    font-size:20px;
 }
 
-.mini-estatistica span {
-    font-size: 20px;
+.mini-estatistica strong{
+    display:block;
+    font-size:18px;
+    margin-top:8px;
 }
 
-.mini-estatistica strong {
-    display: block;
-    font-size: 18px;
-    margin-top: 8px;
+.mini-estatistica small{
+    color:var(--cinza);
+    font-size:10px;
 }
 
-.mini-estatistica small {
-    color: var(--cinza);
-    font-size: 10px;
+/* HISTÓRICO */
+
+.historico{
+    margin-top:15px;
+}
+
+.historico-item{
+    background:var(--card);
+    border:1px solid var(--borda);
+    border-radius:14px;
+    padding:12px;
+    margin-bottom:8px;
+    font-size:10px;
+}
+
+.historico-item strong{
+    font-size:11px;
+}
+
+.historico-item span{
+    display:block;
+    color:var(--cinza);
+    margin-top:4px;
 }
 
 /* DICAS */
 
-.dica {
-    background: var(--card);
-    border: 1px solid var(--borda);
-    padding: 17px;
-    border-radius: 18px;
-    display: flex;
-    gap: 13px;
-    margin-bottom: 10px;
+.dica{
+    background:var(--card);
+    border:1px solid var(--borda);
+    padding:17px;
+    border-radius:18px;
+    display:flex;
+    gap:13px;
+    margin-bottom:10px;
 }
 
-.dica-icone {
-    width: 42px;
-    height: 42px;
-    background: #edf6ef;
-    border-radius: 13px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 21px;
-    flex-shrink: 0;
+.dica-icone{
+    width:42px;
+    height:42px;
+    background:#edf6ef;
+    border-radius:13px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:21px;
+    flex-shrink:0;
 }
 
-.dica h3 {
-    font-size: 13px;
+.dica h3{
+    font-size:13px;
 }
 
-.dica p {
-    color: var(--cinza);
-    font-size: 10px;
-    line-height: 1.5;
-    margin-top: 4px;
+.dica p{
+    color:var(--cinza);
+    font-size:10px;
+    line-height:1.5;
+    margin-top:4px;
 }
 
-/* CONFIGURAÇÕES */
+/* CONFIG */
 
-.config {
-    background: var(--card);
-    border: 1px solid var(--borda);
-    border-radius: 17px;
-    padding: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
+.config{
+    background:var(--card);
+    border:1px solid var(--borda);
+    border-radius:17px;
+    padding:16px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:10px;
 }
 
-.config strong {
-    font-size: 12px;
+.config strong{
+    font-size:12px;
 }
 
-.config p {
-    color: var(--cinza);
-    font-size: 9px;
-    margin-top: 4px;
+.config p{
+    color:var(--cinza);
+    font-size:9px;
+    margin-top:4px;
 }
 
-.switch {
-    position: relative;
-    width: 42px;
-    height: 24px;
+.switch{
+    position:relative;
+    width:42px;
+    height:24px;
 }
 
-.switch input {
-    display: none;
+.switch input{
+    display:none;
 }
 
-.switch span {
-    position: absolute;
-    inset: 0;
-    background: #ccd3ce;
-    border-radius: 30px;
-    cursor: pointer;
+.switch span{
+    position:absolute;
+    inset:0;
+    background:#ccd3ce;
+    border-radius:30px;
+    cursor:pointer;
 }
 
-.switch span::after {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    top: 3px;
-    left: 3px;
-    background: white;
-    border-radius: 50%;
-    transition: 0.2s;
+.switch span:after{
+    content:"";
+    position:absolute;
+    width:18px;
+    height:18px;
+    top:3px;
+    left:3px;
+    background:white;
+    border-radius:50%;
+    transition:.2s;
 }
 
-.switch input:checked + span {
-    background: var(--verde);
+.switch input:checked+span{
+    background:var(--verde);
 }
 
-.switch input:checked + span::after {
-    transform: translateX(18px);
+.switch input:checked+span:after{
+    transform:translateX(18px);
+}
+
+/* BOTÃO ESVAZIAR */
+
+.btn-principal{
+    width:100%;
+    border:none;
+    padding:14px;
+    border-radius:15px;
+    background:var(--verde);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+.btn-principal:hover{
+    background:var(--verde2);
 }
 
 /* MENU */
 
-.menu {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    max-width: 480px;
-    height: 75px;
-    background: rgba(255,255,255,0.97);
-    border-top: 1px solid var(--borda);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 50;
+.menu{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    max-width:480px;
+    height:75px;
+    background:rgba(255,255,255,.97);
+    border-top:1px solid var(--borda);
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    z-index:50;
 }
 
-.menu-btn {
-    border: none;
-    background: transparent;
-    color: #89928d;
-    cursor: pointer;
-    padding: 7px 8px;
-    border-radius: 12px;
+.menu-btn{
+    border:none;
+    background:transparent;
+    color:#89928d;
+    cursor:pointer;
+    padding:7px 8px;
+    border-radius:12px;
 }
 
-.menu-btn span {
-    display: block;
-    font-size: 19px;
-    margin-bottom: 3px;
+.menu-btn span{
+    display:block;
+    font-size:19px;
+    margin-bottom:3px;
 }
 
-.menu-btn small {
-    font-size: 8px;
+.menu-btn small{
+    font-size:8px;
 }
 
-.menu-btn.ativo {
-    color: var(--verde);
-    background: #eaf7ef;
+.menu-btn.ativo{
+    color:var(--verde);
+    background:#eaf7ef;
 }
 
 /* TOAST */
 
-.toast {
-    position: fixed;
-    bottom: 90px;
-    left: 50%;
-    transform: translateX(-50%) translateY(20px);
-    background: #17221c;
-    color: white;
-    padding: 11px 17px;
-    border-radius: 12px;
-    font-size: 11px;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.3s;
-    z-index: 100;
+.toast{
+    position:fixed;
+    bottom:90px;
+    left:50%;
+    transform:translateX(-50%) translateY(20px);
+    background:#17221c;
+    color:white;
+    padding:11px 17px;
+    border-radius:12px;
+    font-size:11px;
+    opacity:0;
+    pointer-events:none;
+    transition:.3s;
+    z-index:100;
 }
 
-.toast.mostrar {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-}
-
-/* MODO ESCURO */
-
-body.escuro {
-    background: #101512;
-}
-
-body.escuro .app {
-    --fundo: #111714;
-    --card: #19201c;
-    --texto: #f0f4f1;
-    --cinza: #9aa59f;
-    --borda: #29332e;
-}
-
-body.escuro .menu {
-    background: #19201c;
-}
-
-body.escuro .btn-tema {
-    background: #26312b;
+.toast.mostrar{
+    opacity:1;
+    transform:translateX(-50%) translateY(0);
 }
 
 /* MAPA */
 
-.mapa {
-    height: 300px;
-    border-radius: 22px;
-    position: relative;
-    overflow: hidden;
-    background: #e5eee6;
+.mapa{
+    height:300px;
+    border-radius:22px;
+    position:relative;
+    overflow:hidden;
+    background:#e5eee6;
 }
 
-.rua {
-    position: absolute;
-    background: white;
+.rua{
+    position:absolute;
+    background:white;
 }
 
-.rua1 {
-    width: 150%;
-    height: 35px;
-    top: 45%;
-    left: -20%;
-    transform: rotate(-15deg);
+.rua1{
+    width:150%;
+    height:35px;
+    top:45%;
+    left:-20%;
+    transform:rotate(-15deg);
 }
 
-.rua2 {
-    width: 120%;
-    height: 28px;
-    top: 20%;
-    left: -10%;
-    transform: rotate(35deg);
+.rua2{
+    width:120%;
+    height:28px;
+    top:20%;
+    left:-10%;
+    transform:rotate(35deg);
 }
 
-.pin {
-    position: absolute;
-    top: 48%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 48px;
+.pin{
+    position:absolute;
+    top:48%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:48px;
 }
 
-.etiqueta-mapa {
-    position: absolute;
-    top: 62%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: white;
-    padding: 8px 12px;
-    border-radius: 10px;
-    font-size: 10px;
+.etiqueta-mapa{
+    position:absolute;
+    top:62%;
+    left:50%;
+    transform:translateX(-50%);
+    background:white;
+    padding:8px 12px;
+    border-radius:10px;
+    font-size:10px;
 }
 
-.info-local {
-    margin-top: 13px;
-    background: var(--card);
-    border: 1px solid var(--borda);
-    border-radius: 17px;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* DARK */
+
+body.escuro{
+    background:#101512;
 }
 
-.online {
-    color: var(--verde);
-    font-size: 9px;
+body.escuro .app{
+    --fundo:#111714;
+    --card:#19201c;
+    --texto:#f0f4f1;
+    --cinza:#9aa59f;
+    --borda:#29332e;
 }
 
-/* RESPONSIVO */
-
-@media (max-width: 360px) {
-    .conteudo {
-        padding: 15px;
-    }
-
-    .acoes {
-        gap: 4px;
-    }
+body.escuro .menu{
+    background:#19201c;
 }
+
 </style>
 </head>
 
@@ -719,18 +711,14 @@ body.escuro .btn-tema {
 
 <div class="app">
 
-<!-- TOPO -->
-
 <header class="topo">
 
-    <div>
-        <div class="logo">ECO</div>
-        <h1>EcoLixeira</h1>
-    </div>
+<div>
+<div class="logo">SMART TECHNOLOGY</div>
+<h1>EcoLixeira</h1>
+</div>
 
-    <button class="btn-tema" id="tema">
-        🌙
-    </button>
+<button class="btn-tema" id="tema">🌙</button>
 
 </header>
 
@@ -738,676 +726,648 @@ body.escuro .btn-tema {
 <main class="conteudo">
 
 
-<!-- ================= INÍCIO ================= -->
+<!-- INÍCIO -->
 
 <section class="tela ativa" id="inicio">
 
-    <div class="boas-vindas">
+<div class="boas-vindas">
 
-        <div>
+<div>
 
-            <span>Olá! 👋</span>
+<span>Olá! 👋</span>
 
-            <h2>Vamos cuidar do planeta?</h2>
+<h2>Sua lixeira está inteligente.</h2>
 
-            <p>
-                Acompanhe sua lixeira inteligente
-                e ajude o meio ambiente.
-            </p>
+<p>
+Acompanhe os compartimentos,
+receba alertas e ajude o planeta.
+</p>
 
-        </div>
+</div>
 
-        <div class="icone-eco">
-            ♻️
-        </div>
+<div class="icone-eco">
+♻️
+</div>
 
-    </div>
+</div>
 
 
-    <div class="titulo-secao">
+<div class="titulo-secao">
 
-        <h2>Status da lixeira</h2>
+<h2>Status dos compartimentos</h2>
 
-        <button
-            class="btn-atualizar"
-            id="atualizar">
-            ↻
-        </button>
+<button class="btn-atualizar" id="atualizar">
+↻
+</button>
 
-    </div>
+</div>
 
 
-    <div class="grid-status">
+<div class="grid-status">
 
 
-        <!-- ORGÂNICO -->
+<!-- ORGÂNICO -->
 
-        <div class="card-status">
+<div class="card-status">
 
-            <div class="icone-status organic">
-                🌱
-            </div>
+<div class="icone-status organic">🌱</div>
 
-            <h3>Orgânico</h3>
+<h3>Orgânico</h3>
 
-            <div class="barra">
+<div class="barra">
+<div class="progresso p1"
+id="bar1"
+style="width:42%">
+</div>
+</div>
 
-                <div
-                    class="progresso p1"
-                    id="bar1"
-                    style="width: 42%;">
-                </div>
+<span class="porcentagem" id="porc1">
+42% — Metade cheio
+</span>
 
-            </div>
+</div>
 
-            <span
-                class="porcentagem"
-                id="porc1">
-                42% — Metade cheio
-            </span>
 
-        </div>
+<!-- RECICLÁVEL -->
 
+<div class="card-status">
 
-        <!-- RECICLÁVEL -->
+<div class="icone-status reciclavel">♻️</div>
 
-        <div class="card-status">
+<h3>Reciclável</h3>
 
-            <div class="icone-status reciclavel">
-                ♻️
-            </div>
+<div class="barra">
+<div class="progresso p2"
+id="bar2"
+style="width:68%">
+</div>
+</div>
 
-            <h3>Reciclável</h3>
+<span class="porcentagem" id="porc2">
+68% — Metade cheio
+</span>
 
-            <div class="barra">
+</div>
 
-                <div
-                    class="progresso p2"
-                    id="bar2"
-                    style="width: 68%;">
-                </div>
 
-            </div>
+<!-- PAPEL -->
 
-            <span
-                class="porcentagem"
-                id="porc2">
-                68% — Metade cheio
-            </span>
+<div class="card-status">
 
-        </div>
+<div class="icone-status papel">📄</div>
 
+<h3>Papel</h3>
 
-        <!-- PAPEL -->
+<div class="barra">
+<div class="progresso p3"
+id="bar3"
+style="width:31%">
+</div>
+</div>
 
-        <div class="card-status">
+<span class="porcentagem" id="porc3">
+31% — Pouco cheio
+</span>
 
-            <div class="icone-status papel">
-                📄
-            </div>
+</div>
 
-            <h3>Papel</h3>
 
-            <div class="barra">
+<!-- METAL -->
 
-                <div
-                    class="progresso p3"
-                    id="bar3"
-                    style="width: 31%;">
-                </div>
+<div class="card-status">
 
-            </div>
+<div class="icone-status metal">🥫</div>
 
-            <span
-                class="porcentagem"
-                id="porc3">
-                31% — Pouco cheio
-            </span>
+<h3>Metal</h3>
 
-        </div>
+<div class="barra">
+<div class="progresso p4"
+id="bar4"
+style="width:82%">
+</div>
+</div>
 
+<span class="porcentagem" id="porc4">
+82% — Quase cheio
+</span>
 
-        <!-- METAL -->
+</div>
 
-        <div class="card-status">
+</div>
 
-            <div class="icone-status metal">
-                🥫
-            </div>
 
-            <h3>Metal</h3>
+<!-- ALERTA DINÂMICO -->
 
-            <div class="barra">
+<div class="alerta atencao" id="alerta">
 
-                <div
-                    class="progresso p4"
-                    id="bar4"
-                    style="width: 82%;">
-                </div>
+<div class="alerta-icone" id="alertaIcone">
+⚠️
+</div>
 
-            </div>
+<div>
 
-            <span
-                class="porcentagem"
-                id="porc4">
-                82% — Quase cheio
-            </span>
+<strong id="alertaTitulo">
+Atenção!
+</strong>
 
-        </div>
+<p id="alertaTexto">
+O compartimento de metal está quase cheio.
+</p>
 
-    </div>
+</div>
 
+</div>
 
-    <div class="alerta">
 
-        <span>⚠️</span>
+<h2 class="subtitulo">
+Ações rápidas
+</h2>
 
-        <div>
 
-            <strong>Atenção!</strong>
+<div class="acoes">
 
-            <p>
-                O compartimento de metal está quase cheio.
-            </p>
+<button class="acao"
+onclick="abrirTela('reciclagem')">
 
-        </div>
+<span>♻️</span>
+<small>Reciclar</small>
 
-    </div>
+</button>
 
 
-    <h2 class="subtitulo">
-        Ações rápidas
-    </h2>
+<button class="acao"
+onclick="abrirTela('dados')">
 
+<span>📊</span>
+<small>Relatórios</small>
 
-    <div class="acoes">
+</button>
 
-        <button
-            class="acao"
-            onclick="abrirTela('reciclagem')">
 
-            <span>♻️</span>
-            <small>Reciclar</small>
+<button class="acao"
+onclick="abrirTela('localizacao')">
 
-        </button>
+<span>📍</span>
+<small>Localização</small>
 
+</button>
 
-        <button
-            class="acao"
-            onclick="abrirTela('dados')">
 
-            <span>📊</span>
-            <small>Relatórios</small>
+<button class="acao"
+onclick="abrirTela('dicas')">
 
-        </button>
+<span>💡</span>
+<small>Dicas</small>
 
+</button>
 
-        <button
-            class="acao"
-            onclick="abrirTela('localizacao')">
+</div>
 
-            <span>📍</span>
-            <small>Localização</small>
 
-        </button>
+<button
+class="btn-principal"
+onclick="esvaziarLixeira()">
 
+🗑️ Esvaziar todos os compartimentos
 
-        <button
-            class="acao"
-            onclick="abrirTela('dicas')">
-
-            <span>💡</span>
-            <small>Dicas</small>
-
-        </button>
-
-    </div>
+</button>
 
 </section>
 
 
-<!-- ================= RECICLAGEM ================= -->
+<!-- RECICLAGEM -->
 
 <section class="tela" id="reciclagem">
 
-    <div class="titulo-pagina">
+<div class="titulo-pagina">
 
-        <span>♻️</span>
+<span>♻️</span>
 
-        <div>
+<div>
 
-            <h2>Reciclagem</h2>
+<h2>Reciclagem</h2>
 
-            <p>
-                Descubra onde colocar cada resíduo.
-            </p>
+<p>
+Descubra onde colocar cada material.
+</p>
 
-        </div>
+</div>
 
-    </div>
-
-
-    <div class="pesquisa">
-
-        🔎
-
-        <input
-            id="busca"
-            type="text"
-            placeholder="Digite um material...">
-
-    </div>
+</div>
 
 
-    <div class="materiais">
+<div class="pesquisa">
+
+🔎
+
+<input
+id="busca"
+type="text"
+placeholder="Digite um material...">
+
+</div>
 
 
-        <div
-            class="material"
-            data-material="garrafa pet plástico">
-
-            <div class="material-icone">
-                🧴
-            </div>
-
-            <div class="material-info">
-
-                <h3>Garrafa PET</h3>
-
-                <p>Reciclável</p>
-
-            </div>
-
-            <span>♻️</span>
-
-        </div>
+<div class="materiais">
 
 
-        <div
-            class="material"
-            data-material="papel">
+<div class="material"
+data-material="garrafa pet plástico">
 
-            <div class="material-icone">
-                📄
-            </div>
+<div class="material-icone">🧴</div>
 
-            <div class="material-info">
+<div class="material-info">
 
-                <h3>Papel</h3>
+<h3>Garrafa PET</h3>
+<p>Reciclável</p>
 
-                <p>Compartimento de papel</p>
+</div>
 
-            </div>
+<span>♻️</span>
 
-            <span>📄</span>
-
-        </div>
+</div>
 
 
-        <div
-            class="material"
-            data-material="lata metal">
+<div class="material"
+data-material="papel">
 
-            <div class="material-icone">
-                🥫
-            </div>
+<div class="material-icone">📄</div>
 
-            <div class="material-info">
+<div class="material-info">
 
-                <h3>Lata</h3>
+<h3>Papel</h3>
+<p>Compartimento de papel</p>
 
-                <p>Compartimento de metal</p>
+</div>
 
-            </div>
+<span>📄</span>
 
-            <span>🥫</span>
-
-        </div>
+</div>
 
 
-        <div
-            class="material"
-            data-material="restos comida orgânico">
+<div class="material"
+data-material="lata metal">
 
-            <div class="material-icone">
-                🍎
-            </div>
+<div class="material-icone">🥫</div>
 
-            <div class="material-info">
+<div class="material-info">
 
-                <h3>Restos de comida</h3>
+<h3>Lata</h3>
+<p>Compartimento de metal</p>
 
-                <p>Resíduo orgânico</p>
+</div>
 
-            </div>
+<span>🥫</span>
 
-            <span>🌱</span>
+</div>
 
-        </div>
 
-    </div>
+<div class="material"
+data-material="restos comida orgânico">
+
+<div class="material-icone">🍎</div>
+
+<div class="material-info">
+
+<h3>Restos de comida</h3>
+<p>Resíduo orgânico</p>
+
+</div>
+
+<span>🌱</span>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= DADOS ================= -->
+<!-- DADOS -->
 
 <section class="tela" id="dados">
 
-    <div class="titulo-pagina">
+<div class="titulo-pagina">
 
-        <span>📊</span>
+<span>📊</span>
 
-        <div>
+<div>
 
-            <h2>Relatórios</h2>
+<h2>Relatórios</h2>
 
-            <p>
-                Veja o impacto da sua reciclagem.
-            </p>
+<p>
+Acompanhe o desempenho da EcoLixeira.
+</p>
 
-        </div>
+</div>
 
-    </div>
-
-
-    <div class="grande-estatistica">
-
-        <span>Total reciclado</span>
-
-        <strong>
-            127 kg
-        </strong>
-
-        <small>
-            +12% neste mês
-        </small>
-
-    </div>
+</div>
 
 
-    <div class="grid-estatisticas">
+<div class="grande-estatistica">
 
-        <div class="mini-estatistica">
-            <span>♻️</span>
-            <strong>63 kg</strong>
-            <small>Plástico</small>
-        </div>
+<span>Total reciclado</span>
 
-        <div class="mini-estatistica">
-            <span>📄</span>
-            <strong>31 kg</strong>
-            <small>Papel</small>
-        </div>
+<strong id="totalKg">
+127 kg
+</strong>
 
-        <div class="mini-estatistica">
-            <span>🥫</span>
-            <strong>22 kg</strong>
-            <small>Metal</small>
-        </div>
+<small>
+Dados registrados pela EcoLixeira
+</small>
 
-        <div class="mini-estatistica">
-            <span>🌱</span>
-            <strong>11 kg</strong>
-            <small>Orgânico</small>
-        </div>
+</div>
 
-    </div>
+
+<div class="grid-estatisticas">
+
+<div class="mini-estatistica">
+
+<span>♻️</span>
+
+<strong id="plastico">
+63 kg
+</strong>
+
+<small>Plástico</small>
+
+</div>
+
+
+<div class="mini-estatistica">
+
+<span>📄</span>
+
+<strong id="papel">
+31 kg
+</strong>
+
+<small>Papel</small>
+
+</div>
+
+
+<div class="mini-estatistica">
+
+<span>🥫</span>
+
+<strong id="metal">
+22 kg
+</strong>
+
+<small>Metal</small>
+
+</div>
+
+
+<div class="mini-estatistica">
+
+<span>🌱</span>
+
+<strong id="organico">
+11 kg
+</strong>
+
+<small>Orgânico</small>
+
+</div>
+
+</div>
+
+
+<h2 class="subtitulo">
+Histórico recente
+</h2>
+
+<div class="historico" id="historico">
+
+<div class="historico-item">
+
+<strong>Hoje</strong>
+
+<span>
+Sistema iniciado e compartimentos monitorados.
+</span>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= LOCALIZAÇÃO ================= -->
+<!-- LOCALIZAÇÃO -->
 
 <section class="tela" id="localizacao">
 
-    <div class="titulo-pagina">
+<div class="titulo-pagina">
 
-        <span>📍</span>
+<span>📍</span>
 
-        <div>
+<div>
 
-            <h2>Localização</h2>
+<h2>Localização</h2>
 
-            <p>
-                Veja onde sua EcoLixeira está instalada.
-            </p>
+<p>
+Localização da EcoLixeira.
+</p>
 
-        </div>
+</div>
 
-    </div>
-
-
-    <div class="mapa">
-
-        <div class="rua rua1"></div>
-        <div class="rua rua2"></div>
-
-        <div class="pin">
-            📍
-        </div>
-
-        <div class="etiqueta-mapa">
-            EcoLixeira #001
-        </div>
-
-    </div>
+</div>
 
 
-    <div class="info-local">
+<div class="mapa">
 
-        <div>
-            📍
-            <strong> EcoLixeira #001</strong>
-        </div>
+<div class="rua rua1"></div>
+<div class="rua rua2"></div>
 
-        <span class="online">
-            ● Online
-        </span>
+<div class="pin">
+📍
+</div>
 
-    </div>
+<div class="etiqueta-mapa">
+EcoLixeira #001
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= DICAS ================= -->
+<!-- DICAS -->
 
 <section class="tela" id="dicas">
 
-    <div class="titulo-pagina">
+<div class="titulo-pagina">
 
-        <span>💡</span>
+<span>💡</span>
 
-        <div>
+<div>
 
-            <h2>Dicas sustentáveis</h2>
+<h2>Dicas</h2>
 
-            <p>
-                Pequenas atitudes fazem diferença.
-            </p>
+<p>
+Pequenas atitudes fazem diferença.
+</p>
 
-        </div>
+</div>
 
-    </div>
-
-
-    <div class="dica">
-
-        <div class="dica-icone">
-            💧
-        </div>
-
-        <div>
-
-            <h3>Economize água</h3>
-
-            <p>
-                Feche a torneira enquanto escova
-                os dentes e evite desperdícios.
-            </p>
-
-        </div>
-
-    </div>
+</div>
 
 
-    <div class="dica">
+<div class="dica">
 
-        <div class="dica-icone">
-            ♻️
-        </div>
+<div class="dica-icone">💧</div>
 
-        <div>
+<div>
 
-            <h3>Separe os resíduos</h3>
+<h3>Economize água</h3>
 
-            <p>
-                Coloque cada material no
-                compartimento correto.
-            </p>
+<p>
+Evite desperdícios e use somente
+a quantidade necessária.
+</p>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 
-    <div class="dica">
+<div class="dica">
 
-        <div class="dica-icone">
-            🛍️
-        </div>
+<div class="dica-icone">♻️</div>
 
-        <div>
+<div>
 
-            <h3>Evite descartáveis</h3>
+<h3>Separe os resíduos</h3>
 
-            <p>
-                Prefira produtos reutilizáveis
-                sempre que possível.
-            </p>
+<p>
+Coloque cada tipo de lixo
+no compartimento correto.
+</p>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 
-    <div class="dica">
+<div class="dica">
 
-        <div class="dica-icone">
-            🌳
-        </div>
+<div class="dica-icone">🌳</div>
 
-        <div>
+<div>
 
-            <h3>Cuide da natureza</h3>
+<h3>Proteja a natureza</h3>
 
-            <p>
-                Reduzir o lixo ajuda a preservar
-                rios, solos e animais.
-            </p>
+<p>
+A separação correta ajuda a reduzir
+os impactos ambientais.
+</p>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= CONFIGURAÇÕES ================= -->
+<!-- CONFIGURAÇÕES -->
 
 <section class="tela" id="configuracoes">
 
-    <div class="titulo-pagina">
+<div class="titulo-pagina">
 
-        <span>⚙️</span>
+<span>⚙️</span>
 
-        <div>
+<div>
 
-            <h2>Configurações</h2>
+<h2>Configurações</h2>
 
-            <p>
-                Personalize seu aplicativo.
-            </p>
+<p>
+Personalize seu aplicativo.
+</p>
 
-        </div>
+</div>
 
-    </div>
-
-
-    <div class="config">
-
-        <div>
-
-            <strong>🔔 Notificações</strong>
-
-            <p>
-                Receber alertas da lixeira.
-            </p>
-
-        </div>
-
-        <label class="switch">
-
-            <input
-                type="checkbox"
-                id="notificacoes"
-                checked>
-
-            <span></span>
-
-        </label>
-
-    </div>
+</div>
 
 
-    <div class="config">
+<div class="config">
 
-        <div>
+<div>
 
-            <strong>📡 Atualização automática</strong>
+<strong>🔔 Notificações</strong>
 
-            <p>
-                Atualizar os dados automaticamente.
-            </p>
+<p>
+Receber alertas da EcoLixeira.
+</p>
 
-        </div>
+</div>
 
-        <label class="switch">
+<label class="switch">
 
-            <input
-                type="checkbox"
-                checked>
+<input
+type="checkbox"
+id="notificacoes"
+checked>
 
-            <span></span>
+<span></span>
 
-        </label>
+</label>
 
-    </div>
+</div>
 
 
-    <div class="config">
+<div class="config">
 
-        <div>
+<div>
 
-            <strong>📱 Alertas de lixeira cheia</strong>
+<strong>🔄 Atualização automática</strong>
 
-            <p>
-                Avisar quando um compartimento estiver cheio.
-            </p>
+<p>
+Atualizar os compartimentos automaticamente.
+</p>
 
-        </div>
+</div>
 
-        <label class="switch">
+<label class="switch">
 
-            <input
-                type="checkbox"
-                checked>
+<input
+type="checkbox"
+id="autoAtualizar">
 
-            <span></span>
+<span></span>
 
-        </label>
+</label>
 
-    </div>
+</div>
+
+
+<div class="config">
+
+<div>
+
+<strong>⚠️ Alertas de lixeira cheia</strong>
+
+<p>
+Avisar quando chegar a 90%.
+</p>
+
+</div>
+
+<label class="switch">
+
+<input
+type="checkbox"
+id="alertas"
+checked>
+
+<span></span>
+
+</label>
+
+</div>
 
 </section>
 
@@ -1415,116 +1375,113 @@ body.escuro .btn-tema {
 </main>
 
 
-<!-- MENU INFERIOR -->
+<!-- MENU -->
 
 <nav class="menu">
 
-    <button
-        class="menu-btn ativo"
-        data-tela="inicio">
+<button class="menu-btn ativo"
+data-tela="inicio">
 
-        <span>🏠</span>
-        <small>Início</small>
+<span>🏠</span>
+<small>Início</small>
 
-    </button>
-
-
-    <button
-        class="menu-btn"
-        data-tela="reciclagem">
-
-        <span>♻️</span>
-        <small>Reciclar</small>
-
-    </button>
+</button>
 
 
-    <button
-        class="menu-btn"
-        data-tela="dados">
+<button class="menu-btn"
+data-tela="reciclagem">
 
-        <span>📊</span>
-        <small>Dados</small>
+<span>♻️</span>
+<small>Reciclar</small>
 
-    </button>
-
-
-    <button
-        class="menu-btn"
-        data-tela="dicas">
-
-        <span>💡</span>
-        <small>Dicas</small>
-
-    </button>
+</button>
 
 
-    <button
-        class="menu-btn"
-        data-tela="configuracoes">
+<button class="menu-btn"
+data-tela="dados">
 
-        <span>⚙️</span>
-        <small>Config.</small>
+<span>📊</span>
+<small>Dados</small>
 
-    </button>
+</button>
+
+
+<button class="menu-btn"
+data-tela="dicas">
+
+<span>💡</span>
+<small>Dicas</small>
+
+</button>
+
+
+<button class="menu-btn"
+data-tela="configuracoes">
+
+<span>⚙️</span>
+<small>Config.</small>
+
+</button>
 
 </nav>
 
 </div>
 
 
-<!-- MENSAGEM -->
-
 <div class="toast" id="toast">
-    Mensagem
+Mensagem
 </div>
 
 
 <script>
 
-/* ==========================================
+/* =========================
    NAVEGAÇÃO
-========================================== */
+========================= */
 
-function abrirTela(nome) {
+function abrirTela(nome){
 
-    const telas = document.querySelectorAll(".tela");
-    const botoes = document.querySelectorAll(".menu-btn");
+    document.querySelectorAll(".tela")
+    .forEach(function(tela){
 
-    telas.forEach(function(tela) {
         tela.classList.remove("ativa");
+
     });
 
-    const telaEscolhida = document.getElementById(nome);
 
-    if (telaEscolhida) {
-        telaEscolhida.classList.add("ativa");
+    const tela =
+    document.getElementById(nome);
+
+    if(tela){
+
+        tela.classList.add("ativa");
+
     }
 
-    botoes.forEach(function(botao) {
+
+    document.querySelectorAll(".menu-btn")
+    .forEach(function(botao){
 
         botao.classList.remove("ativo");
 
-        if (botao.dataset.tela === nome) {
+        if(botao.dataset.tela === nome){
+
             botao.classList.add("ativo");
+
         }
 
     });
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+
+    window.scrollTo(0,0);
+
 }
 
 
-/* ==========================================
-   MENU INFERIOR
-========================================== */
+document.querySelectorAll(".menu-btn")
+.forEach(function(botao){
 
-document.querySelectorAll(".menu-btn").forEach(function(botao) {
-
-    botao.addEventListener("click", function() {
+    botao.addEventListener("click",function(){
 
         abrirTela(this.dataset.tela);
 
@@ -1533,23 +1490,24 @@ document.querySelectorAll(".menu-btn").forEach(function(botao) {
 });
 
 
-/* ==========================================
+/* =========================
    MODO ESCURO
-========================================== */
+========================= */
 
-document.getElementById("tema").addEventListener("click", function() {
+document.getElementById("tema")
+.addEventListener("click",function(){
 
     document.body.classList.toggle("escuro");
 
-    if (document.body.classList.contains("escuro")) {
+    if(document.body.classList.contains("escuro")){
 
-        this.textContent = "☀️";
+        this.textContent="☀️";
 
         mostrarToast("Modo escuro ativado");
 
-    } else {
+    }else{
 
-        this.textContent = "🌙";
+        this.textContent="🌙";
 
         mostrarToast("Modo claro ativado");
 
@@ -1558,83 +1516,269 @@ document.getElementById("tema").addEventListener("click", function() {
 });
 
 
-/* ==========================================
-   FUNÇÃO QUE DEFINE O STATUS
-========================================== */
+/* =========================
+   VALORES DOS COMPARTIMENTOS
+========================= */
 
-function definirStatus(valor) {
+let niveis = {
 
-    if (valor === 0) {
+    1:42,
+    2:68,
+    3:31,
+    4:82
+
+};
+
+
+let nomes = {
+
+    1:"Orgânico",
+    2:"Reciclável",
+    3:"Papel",
+    4:"Metal"
+
+};
+
+
+/* =========================
+   STATUS
+========================= */
+
+function definirStatus(valor){
+
+    if(valor === 0){
+
         return "Vazio";
+
     }
 
-    if (valor <= 10) {
+    if(valor <= 10){
+
         return "Quase vazio";
+
     }
 
-    if (valor <= 40) {
+    if(valor <= 40){
+
         return "Pouco cheio";
+
     }
 
-    if (valor <= 70) {
+    if(valor <= 70){
+
         return "Metade cheio";
+
     }
 
-    if (valor <= 90) {
+    if(valor <= 90){
+
         return "Quase cheio";
+
     }
 
     return "Cheio";
+
 }
 
 
-/* ==========================================
-   ATUALIZA UM COMPARTIMENTO
-========================================== */
+/* =========================
+   ATUALIZAR VISUAL
+========================= */
 
-function atualizarCompartimento(numero, valor) {
+function atualizarVisual(numero){
 
-    const barra = document.getElementById("bar" + numero);
-    const texto = document.getElementById("porc" + numero);
+    const valor = niveis[numero];
 
-    if (!barra || !texto) {
+    const barra =
+    document.getElementById("bar"+numero);
+
+    const texto =
+    document.getElementById("porc"+numero);
+
+
+    barra.style.width =
+    valor+"%";
+
+
+    texto.textContent =
+    valor+"% — "+definirStatus(valor);
+
+}
+
+
+/* =========================
+   ATUALIZA ALERTA
+========================= */
+
+function atualizarAlerta(){
+
+    let maiorNumero = 1;
+
+    for(let i=2;i<=4;i++){
+
+        if(niveis[i] > niveis[maiorNumero]){
+
+            maiorNumero=i;
+
+        }
+
+    }
+
+
+    const maior =
+    niveis[maiorNumero];
+
+
+    const alerta =
+    document.getElementById("alerta");
+
+    const icone =
+    document.getElementById("alertaIcone");
+
+    const titulo =
+    document.getElementById("alertaTitulo");
+
+    const texto =
+    document.getElementById("alertaTexto");
+
+
+    alerta.classList.remove(
+        "normal",
+        "atencao",
+        "perigo"
+    );
+
+
+    /* VAZIO / NORMAL */
+
+    if(maior <= 40){
+
+        alerta.classList.add("normal");
+
+        icone.textContent="✅";
+
+        titulo.textContent="Tudo certo!";
+
+        texto.textContent=
+        "Todos os compartimentos estão com bastante espaço.";
+
         return;
+
     }
 
-    barra.style.width = valor + "%";
 
-    const status = definirStatus(valor);
+    /* ATENÇÃO */
 
-    texto.textContent = valor + "% — " + status;
+    if(maior <= 70){
+
+        alerta.classList.add("atencao");
+
+        icone.textContent="💡";
+
+        titulo.textContent="Atenção!";
+
+        texto.textContent=
+        nomes[maiorNumero]+
+        " está com "+
+        maior+
+        "% de capacidade.";
+
+        return;
+
+    }
+
+
+    /* QUASE CHEIO */
+
+    if(maior <= 90){
+
+        alerta.classList.add("atencao");
+
+        icone.textContent="⚠️";
+
+        titulo.textContent="Quase cheio!";
+
+        texto.textContent=
+        "O compartimento de "+
+        nomes[maiorNumero]+
+        " está com "+
+        maior+
+        "%. Considere esvaziá-lo.";
+
+        return;
+
+    }
+
+
+    /* CHEIO */
+
+    alerta.classList.add("perigo");
+
+    icone.textContent="🚨";
+
+    titulo.textContent="Compartimento cheio!";
+
+    texto.textContent=
+    "O compartimento de "+
+    nomes[maiorNumero]+
+    " chegou a "+
+    maior+
+    "%. É necessário esvaziá-lo.";
+
 }
 
 
-/* ==========================================
-   BOTÃO ATUALIZAR
-========================================== */
+/* =========================
+   ATUALIZA TODOS
+========================= */
 
-document.getElementById("atualizar").addEventListener("click", function() {
+function atualizarTudo(){
 
-    const botao = this;
+    for(let i=1;i<=4;i++){
 
-    botao.style.transform = "rotate(360deg)";
+        atualizarVisual(i);
 
-    setTimeout(function() {
-        botao.style.transform = "rotate(0deg)";
-    }, 500);
-
-
-    /*
-       Gera um nível aleatório para cada
-       compartimento.
-    */
-
-    for (let i = 1; i <= 4; i++) {
-
-        const valor = Math.floor(Math.random() * 101);
-
-        atualizarCompartimento(i, valor);
     }
+
+    atualizarAlerta();
+
+}
+
+
+/* =========================
+   BOTÃO ATUALIZAR
+========================= */
+
+document.getElementById("atualizar")
+.addEventListener("click",function(){
+
+    this.style.transform=
+    "rotate(360deg)";
+
+
+    setTimeout(()=>{
+
+        this.style.transform=
+        "rotate(0deg)";
+
+    },500);
+
+
+    for(let i=1;i<=4;i++){
+
+        niveis[i]=
+        Math.floor(Math.random()*101);
+
+    }
+
+
+    atualizarTudo();
+
+
+    adicionarHistorico();
+
+
+    verificarNotificacao();
 
 
     mostrarToast(
@@ -1644,25 +1788,144 @@ document.getElementById("atualizar").addEventListener("click", function() {
 });
 
 
-/* ==========================================
-   PESQUISA DE MATERIAIS
-========================================== */
+/* =========================
+   ESVAZIAR LIXEIRA
+========================= */
 
-document.getElementById("busca").addEventListener("input", function() {
+function esvaziarLixeira(){
 
-    const pesquisa = this.value.toLowerCase().trim();
+    for(let i=1;i<=4;i++){
 
-    document.querySelectorAll(".material").forEach(function(material) {
+        niveis[i]=0;
 
-        const nome = material.dataset.material.toLowerCase();
+    }
 
-        if (nome.includes(pesquisa)) {
 
-            material.style.display = "flex";
+    atualizarTudo();
 
-        } else {
 
-            material.style.display = "none";
+    adicionarHistorico();
+
+
+    mostrarToast(
+        "Todos os compartimentos foram esvaziados! 🗑️"
+    );
+
+}
+
+
+/* =========================
+   HISTÓRICO
+========================= */
+
+function adicionarHistorico(){
+
+    const historico =
+    document.getElementById("historico");
+
+
+    const item =
+    document.createElement("div");
+
+    item.className=
+    "historico-item";
+
+
+    const agora =
+    new Date().toLocaleTimeString(
+        "pt-BR",
+        {
+            hour:"2-digit",
+            minute:"2-digit"
+        }
+    );
+
+
+    item.innerHTML=
+    "<strong>"+agora+
+    " — Atualização</strong>"+
+    "<span>"+
+    "Orgânico: "+niveis[1]+"% | "+
+    "Reciclável: "+niveis[2]+"% | "+
+    "Papel: "+niveis[3]+"% | "+
+    "Metal: "+niveis[4]+"%"+
+    "</span>";
+
+
+    historico.prepend(item);
+
+
+    if(historico.children.length > 5){
+
+        historico.removeChild(
+            historico.lastChild
+        );
+
+    }
+
+}
+
+
+/* =========================
+   NOTIFICAÇÃO
+========================= */
+
+function verificarNotificacao(){
+
+    const ativado =
+    document.getElementById("alertas").checked;
+
+
+    if(!ativado){
+
+        return;
+
+    }
+
+
+    for(let i=1;i<=4;i++){
+
+        if(niveis[i]>=90){
+
+            mostrarToast(
+                "🚨 "+nomes[i]+
+                " está quase cheio!"
+            );
+
+            return;
+
+        }
+
+    }
+
+}
+
+
+/* =========================
+   PESQUISA
+========================= */
+
+document.getElementById("busca")
+.addEventListener("input",function(){
+
+    const busca =
+    this.value.toLowerCase();
+
+
+    document.querySelectorAll(".material")
+    .forEach(function(material){
+
+        const nome =
+        material.dataset.material;
+
+
+        if(nome.includes(busca)){
+
+            material.style.display="flex";
+
+        }else{
+
+            material.style.display="none";
 
         }
 
@@ -1671,90 +1934,86 @@ document.getElementById("busca").addEventListener("input", function() {
 });
 
 
-/* ==========================================
-   CLICAR NOS MATERIAIS
-========================================== */
+/* =========================
+   AUTO ATUALIZAÇÃO
+========================= */
 
-document.querySelectorAll(".material").forEach(function(material) {
+let intervalo;
 
-    material.addEventListener("click", function() {
 
-        const nome =
-            this.querySelector("h3").textContent;
+document.getElementById("autoAtualizar")
+.addEventListener("change",function(){
+
+    if(this.checked){
+
+        intervalo=setInterval(function(){
+
+            for(let i=1;i<=4;i++){
+
+                niveis[i]=
+                Math.floor(Math.random()*101);
+
+            }
+
+            atualizarTudo();
+
+            verificarNotificacao();
+
+        },10000);
+
 
         mostrarToast(
-            nome + " selecionado ♻️"
+            "Atualização automática ativada 🔄"
         );
 
-    });
+    }else{
 
-});
+        clearInterval(intervalo);
 
-
-/* ==========================================
-   NOTIFICAÇÕES
-========================================== */
-
-document.getElementById("notificacoes").addEventListener("change", function() {
-
-    if (this.checked) {
-
-        mostrarToast("Notificações ativadas 🔔");
-
-    } else {
-
-        mostrarToast("Notificações desativadas");
+        mostrarToast(
+            "Atualização automática desativada"
+        );
 
     }
 
 });
 
 
-/* ==========================================
-   CARTÕES DOS COMPARTIMENTOS
-========================================== */
+/* =========================
+   TOAST
+========================= */
 
-document.querySelectorAll(".card-status").forEach(function(card) {
+function mostrarToast(mensagem){
 
-    card.addEventListener("click", function() {
-
-        const nome =
-            this.querySelector("h3").textContent;
-
-        const status =
-            this.querySelector(".porcentagem").textContent;
-
-        mostrarToast(
-            nome + ": " + status
-        );
-
-    });
-
-});
+    const toast=
+    document.getElementById("toast");
 
 
-/* ==========================================
-   MENSAGEM TOAST
-========================================== */
+    toast.textContent=
+    mensagem;
 
-function mostrarToast(mensagem) {
-
-    const toast =
-        document.getElementById("toast");
-
-    toast.textContent = mensagem;
 
     toast.classList.add("mostrar");
 
+
     clearTimeout(window.timerToast);
 
-    window.timerToast = setTimeout(function() {
+
+    window.timerToast=
+    setTimeout(function(){
 
         toast.classList.remove("mostrar");
 
-    }, 2200);
+    },2500);
 
 }
+
+
+/* =========================
+   INICIAR APP
+========================= */
+
+atualizarTudo();
 
 </script>
 
